@@ -1,16 +1,17 @@
-# 
+
 <h1>Scraping News Paper:</h1>
-    <p>
-        This GitHub repository is part of my work as a Research Assistant. It hosts various code and scripts employed in the research. 
-        The sole intention for using the scraped data is strictly for research purposes.
-    </p>
-    <p>
-        <span style="color:red; font-weight:bold;">Note:</span> 
-        The data collected will never be shared or used for any purpose other than the research for which it was intended.
-    </p>
+<p>
+    This GitHub repository is part of my work as a Research Assistant. It hosts various code and scripts employed in the research. 
+    The sole intention for using the scraped data is strictly for research purposes.
+</p>
+
 
 <h2>Data Availability:</h2>
 <p>Please note that the data itself is not provided in this repository.</p>
+<p>
+    <span style="color:red; font-weight:bold;">Note:</span> 
+    The data collected will never be shared or used for any purpose other than the research for which it was intended.
+</p>
 
 <h2>Prerequisites:</h2>
 <ul>
@@ -25,8 +26,11 @@
 </p>
 
 <hr>
+<h1> Files </h1>
 
-<h1>crawl.py:</h1>
+<p>First run <code> createDB.py </code> to create a database, then run <code> crawl.py </code> to obtain the links of the existing webpages, then run <code> web_scrap.py </code> to obtain the content in the webpages.
+
+<h2>crawl.py:</h2>
 <p>The code performs web scraping of articles from the Wall Street Journal (WSJ) for a specific year. It extracts the article details and stores them in an SQLite database and also saves the information in JSON files. It uses libraries such as <code>requests</code>, <code>BeautifulSoup</code>, <code>json</code>, and <code>sqlite3</code>. The code is organized into distinct classes and methods:</p>
     
 <ul>
@@ -42,7 +46,7 @@
 
 <hr>
 
-<h1>createDB.py:</h1>
+<h2>createDB.py:</h2>
 <p>This script is responsible for initializing the SQLite database that will store the scraped articles and related information. It creates three tables: <code>articles_index</code>, <code>article</code>, and <code>exploration</code>. Each table is designed to hold specific types of data that are crucial for the web scraping and data analysis process.</p>
 
 <p>The <code>articles_index</code> table contains metadata about the articles such as the headline, publication time, and link.</p>
@@ -53,15 +57,15 @@
     
 <hr>
 
-<h1>delete_duplicates.py:</h1>
+<h2>delete_duplicates.py:</h2>
 <p>This script is designed to eliminate duplicate records from the <code>articles_index</code> table in the SQLite database. It does so by identifying articles with the same link and retaining only one instance of each while deleting the others. The number of deleted elements is displayed at the end.</p>
 
 <hr>
 
-<h1>delete_jumplines.py:</h1>
+<h2>delete_jumplines.py:</h2>
 <p>This script is aimed at cleaning the <code>headline</code> field in the <code>articles_index</code> table of the SQLite database. Specifically, it removes newline characters ('\n') that may have been inadvertently inserted during the scraping process. Modified headlines are updated in the database, and a log is printed to indicate the IDs of the updated records.</p>
 
-<h1>web_scrap.py:</h1>
+<h2>web_scrap.py:</h2>
 <p>This script performs automated web scraping of Wall Street Journal articles. It picks randomly <i>n</i> articles link from table <code>articles_index</code> that have not been scrapped.It uses Selenium for browser automation and navigation. The outcome is save in table <code>article</code>.The script is divided into different classes and functions for better modularity:</p>
     
 <ul>
@@ -74,6 +78,8 @@
 </ul>
 
 <p>For performance and rate-limiting, the script includes various sleep timings. It also prints out debugging and state information during execution.</p>
+
+<h1> Additional Information </h1>
 
 <h2>Repository Guidelines:</h2>
 <p>The source code for this project is publicly available on GitHub for educational and illustrative purposes. However, it is crucial to note:</p>

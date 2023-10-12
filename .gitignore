@@ -1,0 +1,7 @@
+﻿.env
+.gitattributes
+
+/article_titles_json/
+/.vs/
+
+articlesWSJ.db

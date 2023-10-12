@@ -1,7 +1,5 @@
 # Scraping News Paper
 
-<!DOCTYPE html>
-<html>
 <head>
     <title>Code Descriptions</title>
 </head>
@@ -71,5 +69,3 @@
     <p>For performance and rate-limiting, the script includes various sleep timings. It also prints out debugging and state information during execution.</p>
 
 </body>
-</html>
-

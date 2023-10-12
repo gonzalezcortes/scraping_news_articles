@@ -1,10 +1,5 @@
-# Scraping News Paper
-
-
-<title>Code Descriptions</title>
-
-
-<h1>About This GitHub Repository:</h1>
+# 
+<h1>Scraping News Paper:</h1>
 <p>This GitHub repository is part of my work as a Research Assistant. It hosts various code and scripts employed in the research.</p>
 
 <h2>Data Availability:</h2>
@@ -54,7 +49,7 @@
 <p>This script is aimed at cleaning the <code>headline</code> field in the <code>articles_index</code> table of the SQLite database. Specifically, it removes newline characters ('\n') that may have been inadvertently inserted during the scraping process. Modified headlines are updated in the database, and a log is printed to indicate the IDs of the updated records.</p>
 
 <h1>web_scrap.py:</h1>
-<p>This script performs automated web scraping of Wall Street Journal articles. It uses Selenium for browser automation and navigation. The script is divided into different classes and functions for better modularity:</p>
+<p>This script performs automated web scraping of Wall Street Journal articles. It picks randomly <i>n</i> articles link from table <code>articles_index</code> that have not been scrapped.It uses Selenium for browser automation and navigation. The outcome is save in table <code>article</code>.The script is divided into different classes and functions for better modularity:</p>
     
 <ul>
     <li><code>Scraper</code> class initializes a web driver and prepares the browser for scraping.</li>

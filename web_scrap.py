@@ -1,12 +1,10 @@
-
 from dotenv import load_dotenv
 load_dotenv()
 from datetime import datetime
 import sqlite3
 import numpy as np
-import logging
+
 import os
-import sys
 import time
 
 from selenium import webdriver
@@ -16,16 +14,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 from selenium.common.exceptions import (
-    NoSuchElementException,
-    StaleElementReferenceException,
-)
+    NoSuchElementException)
 
-logging.basicConfig(
-    format="%(asctime)s, %(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s",
-    datefmt="%Y-%m-%d:%H:%M:%S",
-    level=logging.INFO,
-    stream=sys.stdout,
-)
+
 
 URL = "https://www.wsj.com/"
 ARG_WINDOW_SIZE = "--window-size=1920,1080"

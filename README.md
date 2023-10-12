@@ -1,6 +1,13 @@
 # 
 <h1>Scraping News Paper:</h1>
-<p>This GitHub repository is part of my work as a Research Assistant. It hosts various code and scripts employed in the research.</p>
+    <p>
+        This GitHub repository is part of my work as a Research Assistant. It hosts various code and scripts employed in the research. 
+        The sole intention for using the scraped data is strictly for research purposes.
+    </p>
+    <p>
+        <span style="color:red; font-weight:bold;">Note:</span> 
+        The data collected will never be shared or used for any purpose other than the research for which it was intended.
+    </p>
 
 <h2>Data Availability:</h2>
 <p>Please note that the data itself is not provided in this repository.</p>
@@ -10,6 +17,12 @@
     <li>A <code>.env</code> file needs to be created to host passwords and user credentials.</li>
     <li>A folder named <code>article_titles_json</code> should be created if you wish to additionally save article titles in JSON format.</li>
 </ul>
+
+<p>
+    <span style="color:red; font-weight:bold;">Warning:</span> 
+    When you run the script for the first time, you may encounter popups for cookies on the website. 
+    These should be manually clicked according to your user preference before continuing with the web scraping.
+</p>
 
 <hr>
 
@@ -62,3 +75,27 @@
 
 <p>For performance and rate-limiting, the script includes various sleep timings. It also prints out debugging and state information during execution.</p>
 
+<h2>Repository Guidelines:</h2>
+<p>The source code for this project is publicly available on GitHub for educational and illustrative purposes. However, it is crucial to note:</p>
+    
+<ul>
+    <li>The code should not be used for any illegal or unethical activities.</li>
+    <li>Respect the rate-limiting and scraping guidelines of the websites you are targeting.</li>
+    <li>This user reserves the right to delete the GitHub repository or make it private without prior notice if it is found to be misused.</li>
+</ul>
+
+<h2>Library Prerequisites:</h2>
+<p>This script relies on several Python libraries for its functionality. Ensure you have the following libraries installed before running the script:</p>
+    
+<ul>
+    <li><code>requests</code> - For making HTTP requests.</li>
+    <li><code>BeautifulSoup</code> from <code>bs4</code> - For parsing HTML content.</li>
+    <li><code>json</code> - For handling JSON data.</li>
+    <li><code>datetime</code> - For manipulating and formatting dates and times.</li>
+    <li><code>sqlite3</code> - For database management.</li>
+    <li><code>time</code> - For sleep timings.</li>
+    <li><code>dotenv</code> - For environment variable management.</li>
+    <li><code>numpy</code> - For numerical computations.</li>
+    <li><code>os</code> - For system and environment manipulation.</li>
+    <li><code>selenium</code> - For web browser automation.</li>
+</ul>
